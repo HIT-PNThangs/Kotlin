@@ -7,12 +7,13 @@ fun main() {
 
     // in ra màn hình: print(), println()
 
-    val b: String ? = null
+    // Any: mọi kiểu dữ liệu
 
-    val a = when(b) {
-        null -> "hi"
-        else -> "hello"
-    }
+    val a : Any = "String"
+    val b : Any = 123
+    val c : Any = Pair(1, 2)
 
-    print(a)
+    println(a)
+    println(b)
+    println(c)
 }

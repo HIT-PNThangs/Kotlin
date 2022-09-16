@@ -1,7 +1,15 @@
 package Lamp
 
-class Lamp(a: Boolean) {
+class Lamp(private var a: Boolean) {
     private var isOn: Boolean = a;
+
+    fun getA(): Boolean {
+        return a
+    }
+
+    fun setA(value: Boolean) {
+        a = value
+    }
 
     fun turnOn() {
         isOn = true
