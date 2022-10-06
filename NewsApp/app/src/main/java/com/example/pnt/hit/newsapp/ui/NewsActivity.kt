@@ -7,7 +7,6 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.pnt.hit.newsapp.R
 import com.example.pnt.hit.newsapp.database.ArticleDatabase
-import com.example.pnt.hit.newsapp.databinding.ActivityNewsBinding
 import com.example.pnt.hit.newsapp.repository.NewsRepository
 import kotlinx.android.synthetic.main.activity_news.*
 
@@ -18,10 +17,10 @@ class NewsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news)
 
-        val newsRepository = NewsRepository(ArticleDatabase(this))
-        val viewModelProviderFactory = NewsViewModelProviderFactory(newsRepository)
-        viewModel = ViewModelProvider(this, viewModelProviderFactory).get(NewsViewModel::class.java)
+//        val newsRepository = NewsRepository(ArticleDatabase(this))
+//        val viewModelProviderFactory = NewsViewModelProviderFactory(newsRepository)
+//        viewModel = ViewModelProvider(this, viewModelProviderFactory).get(NewsViewModel::class.java)
 
-        bottomNavigationView.setupWithNavController(newNavHostFragment.findNavController())
+        bottomNavigationView.setupWithNavController(newsNavHostFragment.findNavController())
     }
 }
