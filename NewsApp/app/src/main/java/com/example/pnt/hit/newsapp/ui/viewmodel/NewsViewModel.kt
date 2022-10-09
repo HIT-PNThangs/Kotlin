@@ -1,8 +1,9 @@
-package com.example.pnt.hit.newsapp.ui
+package com.example.pnt.hit.newsapp.ui.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import androidx.room.Query
 import com.example.pnt.hit.newsapp.model.NewsResponse
 import com.example.pnt.hit.newsapp.repository.NewsRepository
 import com.example.pnt.hit.newsapp.util.Resource
@@ -15,6 +16,9 @@ class NewsViewModel(
     val breakingNews: MutableLiveData<Resource<NewsResponse>> = MutableLiveData()
     val breakingNewsPage = 1
 
+    val searchNews: MutableLiveData<Resource<NewsResponse>> = MutableLiveData()
+    val searchNewsPage = 1
+
     init {
         getBreakingNews("us")
     }
@@ -26,7 +30,24 @@ class NewsViewModel(
         breakingNews.postValue(handleBreakingNewsResponse(response))
     }
 
+    fun searchNews(searchQuery: String) = viewModelScope.launch {
+        searchNews.postValue(Resource.Loading())
+
+        val response = newsRepository.searchNews(searchQuery, searchNewsPage)
+        searchNews.postValue(handleSearchNewsResponse(response))
+    }
+
     private fun handleBreakingNewsResponse(response: Response<NewsResponse>) : Resource<NewsResponse> {
+        if(response.isSuccessful) {
+            response.body()?.let { resultResponse ->
+                return Resource.Success(resultResponse)
+            }
+        }
+
+        return Resource.Error(response.message())
+    }
+
+    private fun handleSearchNewsResponse(response: Response<NewsResponse>) : Resource<NewsResponse> {
         if(response.isSuccessful) {
             response.body()?.let { resultResponse ->
                 return Resource.Success(resultResponse)
