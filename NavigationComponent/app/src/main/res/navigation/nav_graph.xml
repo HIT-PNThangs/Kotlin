@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.pnt.hit.navigationcomponent.fragment.MainFragment"
+        android:name="com.example.pnt.hit.navigationcomponent.ui.fragment.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main">
         <action
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/chooserRecipientFragment"
-        android:name="com.example.pnt.hit.navigationcomponent.fragment.ChooserRecipientFragment"
+        android:name="com.example.pnt.hit.navigationcomponent.ui.fragment.ChooserRecipientFragment"
         android:label="fragment_chooser_recipient"
         tools:layout="@layout/fragment_chooser_recipient">
         <argument
@@ -50,13 +50,13 @@
     </fragment>
     <fragment
         android:id="@+id/confirmationFragment"
-        android:name="com.example.pnt.hit.navigationcomponent.fragment.ConfirmationFragment"
+        android:name="com.example.pnt.hit.navigationcomponent.ui.fragment.ConfirmationFragment"
         android:label="fragment_confirmation"
         tools:layout="@layout/fragment_confirmation">
     </fragment>
     <fragment
         android:id="@+id/specifyAmountFragment"
-        android:name="com.example.pnt.hit.navigationcomponent.fragment.SpecifyAmountFragment"
+        android:name="com.example.pnt.hit.navigationcomponent.ui.fragment.SpecifyAmountFragment"
         android:label="fragment_specify_amount"
         tools:layout="@layout/fragment_specify_amount">
 
@@ -78,12 +78,12 @@
     </fragment>
     <fragment
         android:id="@+id/viewBalanceFragment"
-        android:name="com.example.pnt.hit.navigationcomponent.fragment.ViewBalanceFragment"
+        android:name="com.example.pnt.hit.navigationcomponent.ui.fragment.ViewBalanceFragment"
         android:label="fragment_view_balance"
         tools:layout="@layout/fragment_view_balance" />
     <fragment
         android:id="@+id/viewTransactionFragment"
-        android:name="com.example.pnt.hit.navigationcomponent.fragment.ViewTransactionFragment"
+        android:name="com.example.pnt.hit.navigationcomponent.ui.fragment.ViewTransactionFragment"
         android:label="fragment_view_transaction"
         tools:layout="@layout/fragment_view_transaction" />
 </navigation>

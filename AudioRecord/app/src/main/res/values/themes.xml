@@ -1,0 +1,24 @@
+<resources>
+    <style name="Theme.AudioRecord" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/status</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <item name="rippleColor">@color/grayDarkDisable</item>
+
+        <item name="android:textColor">@color/colorText</item>
+    </style>
+    
+    <style name="TextLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+
+        <item name="boxBackgroundColor">@color/gray</item>
+        <item name="boxStrokeColor">@color/stroke</item>
+
+        <item name="boxCornerRadiusBottomStart">16dp</item>
+        <item name="boxCornerRadiusBottomEnd">16dp</item>
+
+        <item name="boxCornerRadiusTopStart">16dp</item>
+        <item name="boxCornerRadiusTopEnd">16dp</item>
+    </style>
+</resources>

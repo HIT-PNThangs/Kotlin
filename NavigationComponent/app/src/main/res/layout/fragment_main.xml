@@ -5,7 +5,7 @@
     android:id="@+id/parentLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.MainFragment">
+    tools:context=".ui.fragment.MainFragment">
 
     <Button
         android:id="@+id/view_transactions_btn"
