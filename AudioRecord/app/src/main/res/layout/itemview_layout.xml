@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemAudioRecord"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="16dp"
+    tools:ignore="RtlSymmetry">
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/background_circle"
+        android:clickable="false"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_play1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFilename"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/checkBox"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="@+id/imageButton"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvMeta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="TextView"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/tvFilename"
+        app:layout_constraintStart_toStartOf="@+id/tvFilename"
+        app:layout_constraintTop_toBottomOf="@+id/tvFilename"
+        tools:ignore="HardcodedText" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMeta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvFilename" />
+</androidx.constraintlayout.widget.ConstraintLayout>

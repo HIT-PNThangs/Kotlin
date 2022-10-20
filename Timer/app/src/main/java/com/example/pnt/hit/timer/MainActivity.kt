@@ -1,5 +1,6 @@
 package com.example.pnt.hit.timer
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pnt.hit.timer.databinding.ActivityMainBinding
@@ -26,6 +27,10 @@ class MainActivity : AppCompatActivity(), Timer.OnTimerTickListener {
                 else -> startRecording()
             }
         }
+
+        binding.btReload.setOnClickListener {
+            stop()
+        }
     }
 
     private fun startRecording() {
@@ -33,14 +38,15 @@ class MainActivity : AppCompatActivity(), Timer.OnTimerTickListener {
         isPause = false
 
         timer.start()
+        binding.btStart.setImageResource(R.drawable.ic_stop)
     }
 
     private fun resumeRecorder() {
-
         isRecording = true
         isPause = false
 
         timer.start()
+        binding.btStart.setImageResource(R.drawable.ic_stop)
     }
 
     private fun pauseRecording() {
@@ -48,6 +54,19 @@ class MainActivity : AppCompatActivity(), Timer.OnTimerTickListener {
         isPause = true
 
         timer.pause()
+        binding.btStart.setImageResource(R.drawable.ic_play)
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun stop() {
+        isPause = false
+        isRecording = false
+
+        binding.btStart.setImageResource(R.drawable.ic_play)
+
+        binding.textView.text = "00:00.00"
+
+        timer.stop()
     }
 
     override fun onTimerTick(duration: String) {

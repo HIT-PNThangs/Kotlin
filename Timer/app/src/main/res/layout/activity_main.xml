@@ -37,7 +37,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="50dp"
         android:text="00:00.00"
         android:textColor="@color/grayDarkDisable"
         android:textSize="54sp"
@@ -49,7 +49,7 @@
     <View
         android:id="@+id/view"
         android:layout_width="0dp"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
@@ -65,14 +65,15 @@
         android:layout_marginBottom="32dp"
         android:background="@drawable/background_button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/btReload"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_play"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="@string/app_name" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/btReload"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:background="@drawable/background_button"
@@ -82,7 +83,10 @@
         app:layout_constraintStart_toEndOf="@+id/btStart"
         app:layout_constraintTop_toTopOf="@+id/btStart"
         app:srcCompat="@drawable/ic_refresh"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="@string/app_name" />
+
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/list"
