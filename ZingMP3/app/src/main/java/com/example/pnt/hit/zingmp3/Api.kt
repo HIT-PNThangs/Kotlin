@@ -17,5 +17,5 @@ interface Api {
     }
 
     @GET("xhr/chart-realtime")
-    fun getSong(): Call<Music>
+    fun getSong(): List<Music>
 }
