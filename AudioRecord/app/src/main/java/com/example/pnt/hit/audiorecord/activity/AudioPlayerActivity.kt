@@ -8,6 +8,7 @@ import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import android.widget.SeekBar
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pnt.hit.audiorecord.R
 import com.example.pnt.hit.audiorecord.databinding.ActivityAudioPlayerBinding
@@ -51,7 +52,7 @@ class AudioPlayerActivity : AppCompatActivity() {
         handler = Handler(Looper.getMainLooper())
         runnable = Runnable {
             binding.seekBar.progress = mediaPlayer.currentPosition
-            binding.tvTrackProgress.text = dateFormat(mediaPlayer.currentPosition)
+            binding.tvTrackProgress.text = numberFormat(mediaPlayer.currentPosition)
             handler.postDelayed(runnable, delay)
         }
 
@@ -66,7 +67,7 @@ class AudioPlayerActivity : AppCompatActivity() {
         playPausePlayer()
 
         binding.seekBar.max = mediaPlayer.duration
-        binding.tvTrackDuration.text = dateFormat(mediaPlayer.duration)
+        binding.tvTrackDuration.text = numberFormat(mediaPlayer.duration)
 
         mediaPlayer.setOnCompletionListener {
             binding.btPlay.setImageResource(R.drawable.ic_play)
@@ -123,7 +124,7 @@ class AudioPlayerActivity : AppCompatActivity() {
         handler.removeCallbacks(runnable)
     }
 
-    private fun dateFormat(duration: Int): String {
+    private fun numberFormat(duration: Int): String {
         val d = duration / 1000
         val s = d % 60
         val m = (d / 60 % 60)

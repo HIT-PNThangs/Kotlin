@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.TodoList" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/gray</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:fontFamily">@font/ubuntu_mono_regular</item>
+
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>
