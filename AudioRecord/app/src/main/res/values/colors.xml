@@ -2,7 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
     <color name="orange">#f4511e</color>
 
     <color name="gray">#ececec</color>
@@ -13,8 +12,6 @@
     <color name="status">#ededed</color>
     
     <color name="stroke">#1e88e5</color>
-
     <color name="opaqueBG">#61000000</color>
-    
     <color name="playerColor">#ff4349</color>
 </resources>

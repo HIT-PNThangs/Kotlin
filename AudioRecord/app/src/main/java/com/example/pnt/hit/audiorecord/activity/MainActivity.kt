@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity(), Timer.OnTimerTickListener {
     private var duration = ""
 
     @SuppressLint("SimpleDateFormat")
-    private var simpleDateFormat = SimpleDateFormat("yyyyMMddhhmmss")
+    private var simpleDateFormat = SimpleDateFormat("yyyyMMdd/hhmmss")
     private var isRecording = false
     private var isPause = false
 

@@ -88,6 +88,11 @@
         android:background="@color/opaqueBG"
         android:visibility="gone" />
 
+<!--    <include-->
+<!--        android:id="@+id/bottomMainSheet"-->
+<!--        layout="@layout/bottom_sheet"-->
+<!--        android:visibility="gone" />-->
+
     <include
         android:id="@+id/bottomMainSheet"
         layout="@layout/bottom_sheet" />

@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.RoomDatabaseGuide" parent="Theme.MaterialComponents.Light">
+        <item name="android:statusBarColor">@color/status</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+
+        <item name="rippleColor">@color/grayDarkDisable</item>
+
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:fontFamily">@font/ubuntu_mono_regular</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="EditTextTheme" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundColor">@color/gray</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+
+        <item name="boxStrokeColor">@color/black</item>
+
+        <item name="boxCornerRadiusTopEnd">24dp</item>
+        <item name="boxCornerRadiusBottomEnd">24dp</item>
+        <item name="boxCornerRadiusTopStart">24dp</item>
+        <item name="boxCornerRadiusBottomStart">24dp</item>
+
+        <item name="endIconMode">clear_text</item>
+    </style>
+</resources>
