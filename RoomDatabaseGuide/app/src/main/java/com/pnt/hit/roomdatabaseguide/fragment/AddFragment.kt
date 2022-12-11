@@ -19,10 +19,6 @@ class AddFragment : Fragment() {
     private lateinit var binding: FragmentAddBinding
     private lateinit var userViewModel: UserViewModel
 
-//    private val userViewModel : UserViewModel by viewModels {
-//        UserViewModel(requireActivity().application)
-//    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
