@@ -1,4 +1,4 @@
-package com.example.pnt.hit.timer
+package com.pnt.timer
 
 import android.os.Handler
 import android.os.Looper

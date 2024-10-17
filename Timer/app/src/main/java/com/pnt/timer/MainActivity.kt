@@ -1,8 +1,9 @@
-package com.example.pnt.hit.timer
+package com.pnt.timer
 
 import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.pnt.hit.timer.R
 import com.example.pnt.hit.timer.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(), Timer.OnTimerTickListener {
